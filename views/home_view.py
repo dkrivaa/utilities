@@ -18,4 +18,4 @@ with st.container(border=True):
     with tab3:
         st.header('Under Construction')
         st.image(get_image('https://pics.freeicons.io/uploads/icons/png/7989827331599996561-64.png'))
-
+        st.page_link('views/utf8_view.py')
