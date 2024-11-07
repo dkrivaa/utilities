@@ -15,7 +15,7 @@ with st.container(border=True):
             st.page_link('views/pdf_split_view.py')
             st.page_link('views/pdf_from_image_view.py')
         with col2:
-            st.image(get_image('https://pics.freeicons.io/uploads/icons/png/20642841761530177259-512.png'))
+            st.image(get_image('https://pics.freeicons.io/uploads/icons/png/20642841761530177259-64.png'))
     with tab2:
         st.header('Decoding / Encoding')
         st.image(get_image('https://pics.freeicons.io/uploads/icons/png/12013790981678978252-64.png'))
