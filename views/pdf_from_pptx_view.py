@@ -5,10 +5,10 @@ from pdf_functions import pdf_from_pptx
 st.title('PDF - Make PDF from images')
 st.write('---')
 
-image_files = st.file_uploader('Upload PowerPoint Presentation for PDF', type=['pptx', ])
+pptx_file = st.file_uploader('Upload PowerPoint Presentation for PDF', type=['pptx', ])
 
-if image_files:
-    pdf_stream = pdf_from_pptx(image_files)
+if pptx_file:
+    pdf_stream = pdf_from_pptx(pptx_file)
 
     st.write('---')
 
