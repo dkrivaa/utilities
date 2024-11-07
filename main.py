@@ -22,6 +22,11 @@ pdf_from_image_page = st.Page(
     title='PDF from images'
 )
 
+pdf_from_pptx_page = st.Page(
+    page='views/pdf_from_pptx.py',
+    title='PDF from pptx'
+)
+
 utf8_page = st.Page(
     page='views/utf8_view.py',
     title='Encode CSV as UTF-8'
@@ -29,7 +34,7 @@ utf8_page = st.Page(
 
 pg = st.navigation(pages={
     'Home': [home_page,],
-    'PDF': [pdf_merge_page, pdf_split_page, pdf_from_image_page],
+    'PDF': [pdf_merge_page, pdf_split_page, pdf_from_image_page, pdf_from_pptx_page],
     'UTF-8': [utf8_page],
 })
 

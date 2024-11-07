@@ -2,6 +2,7 @@ import pymupdf
 from PIL import Image
 import io
 import streamlit as st
+from pptx import Presentation
 
 
 # Merge pdfs and return stream
@@ -103,4 +104,48 @@ def pdf_from_image(image_files):
     # Rewind the buffer to the beginning
     pdf_stream.seek(0)
     return pdf_stream
+
+
+def pdf_from_pptx(pptx_file):
+    def slide_to_image(slide):
+        # Placeholder image generation logic; replace this with an actual rendering if available
+        image = Image.new("RGB", (1280, 720), color="white")
+        # Note: This would need to contain rendering logic for each slide
+        # if `python-pptx` could render each slide, it would happen here.
+        return image
+
+    # Define A4 dimensions at 72 DPI (pixels)
+    A4_WIDTH_PX = 595
+    A4_HEIGHT_PX = 842
+
+    # Load the PowerPoint presentation
+    presentation = Presentation(pptx_file)
+
+    # Create an in-memory PDF file
+    pdf_stream = io.BytesIO()
+    pdf_document = pymupdf.open()  # Create a new PDF document
+
+    for slide_number, slide in enumerate(presentation.slides):
+        # Render each slide to an image
+        image_stream = io.BytesIO()
+        image = slide_to_image(slide)
+        image = image.resize((A4_WIDTH_PX, A4_HEIGHT_PX), Image.LANCZOS)
+        image.save(image_stream, format="JPEG")
+        image_stream.seek(0)
+
+        # Create a new page in the PDF for each slide
+        page = pdf_document.new_page(width=A4_WIDTH_PX, height=A4_HEIGHT_PX)
+        rect = pymupdf.Rect(0, 0, A4_WIDTH_PX, A4_HEIGHT_PX)
+        page.insert_image(rect, stream=image_stream.getvalue())
+
+    # Save the PDF document to the in-memory stream
+    pdf_document.save(pdf_stream)
+    pdf_document.close()
+
+    # Rewind the buffer to the beginning
+    pdf_stream.seek(0)
+    return pdf_stream
+
+
+
 
