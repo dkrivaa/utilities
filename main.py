@@ -19,7 +19,7 @@ pdf_split_page = st.Page(
 
 pdf_from_image_page = st.Page(
     page='views/pdf_from_image_view.py',
-    title='PDF from image'
+    title='PDF from images'
 )
 
 utf8_page = st.Page(
