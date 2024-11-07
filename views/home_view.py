@@ -9,15 +9,16 @@ with st.container(border=True):
     with tab1:
         st.header('PDF - Merge & Split')
         st.image(get_image('https://pics.freeicons.io/uploads/icons/png/15519179861536080156-64.png'))
-        col1, col2, col3 = st.columns([2, 1, 5], vertical_alignment='center')
+        col1, col2, col3 = st.columns([1, 2, 5], vertical_alignment='center')
         with col1:
+            st.image(get_image('https://pics.freeicons.io/uploads/icons/png/20642841761530177259-32.png'))
+            st.image(get_image('https://pics.freeicons.io/uploads/icons/png/20642841761530177259-32.png'))
+            st.image(get_image('https://pics.freeicons.io/uploads/icons/png/20642841761530177259-32.png'))
+        with col2:
             st.page_link('views/pdf_merge_view.py')
             st.page_link('views/pdf_split_view.py')
             st.page_link('views/pdf_from_image_view.py')
-        with col2:
-            st.image(get_image('https://pics.freeicons.io/uploads/icons/png/20642841761530177259-32.png'))
-            st.image(get_image('https://pics.freeicons.io/uploads/icons/png/20642841761530177259-32.png'))
-            st.image(get_image('https://pics.freeicons.io/uploads/icons/png/20642841761530177259-32.png'))
+
     with tab2:
         st.header('Decoding / Encoding')
         st.image(get_image('https://pics.freeicons.io/uploads/icons/png/12013790981678978252-64.png'))
