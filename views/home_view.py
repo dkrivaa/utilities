@@ -9,7 +9,7 @@ with st.container(border=True):
     with tab1:
         st.header('PDF - Merge & Split')
         st.image(get_image('https://pics.freeicons.io/uploads/icons/png/15519179861536080156-64.png'))
-        col1, col2, col3 = st.columns([2, 1, 5])
+        col1, col2, col3 = st.columns([2, 1, 5], vertical_alignment='center')
         with col1:
             st.page_link('views/pdf_merge_view.py')
             st.page_link('views/pdf_split_view.py')
