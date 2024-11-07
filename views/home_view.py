@@ -11,6 +11,7 @@ with st.container(border=True):
         st.image(get_image('https://pics.freeicons.io/uploads/icons/png/15519179861536080156-64.png'))
         st.page_link('views/pdf_merge_view.py')
         st.page_link('views/pdf_split_view.py')
+        st.page_link('views/utf8_view.py')
     with tab2:
         st.header('Decoding / Encoding')
         st.image(get_image('https://pics.freeicons.io/uploads/icons/png/12013790981678978252-64.png'))
@@ -18,4 +19,4 @@ with st.container(border=True):
     with tab3:
         st.header('Under Construction')
         st.image(get_image('https://pics.freeicons.io/uploads/icons/png/7989827331599996561-64.png'))
-        st.page_link('views/utf8_view.py')
+
