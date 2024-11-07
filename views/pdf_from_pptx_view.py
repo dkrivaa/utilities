@@ -18,6 +18,6 @@ if image_files:
         st.download_button(
             label="Download PDF",
             data=pdf_stream,
-            file_name="image.pdf",
+            file_name="pptx.pdf",
             mime="application/pdf"
         )
