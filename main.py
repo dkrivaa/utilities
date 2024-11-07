@@ -23,7 +23,7 @@ pdf_from_image_page = st.Page(
 )
 
 pdf_from_pptx_page = st.Page(
-    page='views/pdf_from_pptx.py',
+    page='views/pdf_from_pptx_view.py',
     title='PDF from pptx'
 )
 
