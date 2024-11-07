@@ -34,7 +34,7 @@ utf8_page = st.Page(
 
 pg = st.navigation(pages={
     'Home': [home_page,],
-    'PDF': [pdf_merge_page, pdf_split_page, pdf_from_image_page, pdf_from_pptx_page],
+    'PDF': [pdf_merge_page, pdf_split_page, pdf_from_image_page, ],
     'UTF-8': [utf8_page],
 })
 
